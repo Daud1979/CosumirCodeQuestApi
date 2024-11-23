@@ -49,15 +49,7 @@ h1 {
   font-size: 1em;
   color: white;
 }
-/* .questions-container {
-  width: 100%;              
-  max-width: 80%;          
-  margin: 20px auto;       
-  padding: 10px;
-  border: 1px solid #ddd; 
-  border-radius: 8px;      
-  overflow: hidden;        
-} */
+
 .count{
     width: 50%;
     gap: 1rem;

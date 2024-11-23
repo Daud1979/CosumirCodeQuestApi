@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <h1>Questions List From Code Quest</h1>
+  <div class="form-container">
+    <label for="api-select">Select Api:</label>
+    <select id="api-select" name="category">  
+      <option value="ia">Questions AI</option>
+      <option value="random">Questions Random</option>      
+    </select>
+    <label for="category-select">Select Category:</label>
+    <select id="category-select" name="category">
+      <option value="all">All Categories</option> '', '', '', '', '', '', '', '', '', '', '', '', ''
+      <option value="rest-api">rest-api</option>
+      <option value="php">php</option>
+      <option value="python">python</option>
+      <option value="nodejs">nodejs</option>
+      <option value="mongodb">mongodb</option>
+      <option value="javascript">javascript</option>
+      <option value="html">html</option>
+      <option value="git">git</option>
+      <option value="css">css</option>
+      <option value="react">react</option>
+      <option value="angular">angular</option>
+      <option value="other">other</option>
+    </select>
+    <label for="question-count">Number of Questions:</label>
+    <div class="count">     
+      <input type="number" id="question-count" name="question-count" placeholder="Enter a number">   
+      <button id="generateQuestions">Questions</button>      
+      <div id="spinner" class="spinner"></div>
+    </div>  
+  </div>
+  <div class="tab-container">
+    <button class="tab-button active" data-target="#questions-containerapi">Json</button>
+    <button class="tab-button" data-target="#questions-container">Questions</button>
+  </div>
+  <div class="tab-content">
+    <div class="questions-container active" id="questions-containerapi">
+      <pre id="output"></pre>
+    </div>
+    <div class="questions-container" id="questions-container">
+      <!-- Aquí se mostrarán las preguntas con formato -->
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

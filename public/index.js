@@ -28,7 +28,7 @@ btngenerate.addEventListener('click', ()=>{
    api = document.querySelector('#api-select').value;
    categories = document.querySelector('#category-select').value;
    count= document.querySelector('#question-count').value;
-   api =='ia'? api='https://codequestapi.onrender.com/api/v1/questions/ai':api='https://codequestapi.onrender.com/api/v1/questions/random'
+   //api =='ia'? api='https://codequestapi.onrender.com/api/v1/questions/ai':api='https://codequestapi.onrender.com/api/v1/questions/random'
    categories=='all'?categories='':categories=categories   
    apiurl.value=`${api}?amount=${count}&categories=${categories}`;
    const API_URL = `${api}?amount=${count}&categories=${categories}`;
@@ -92,6 +92,7 @@ btngenerate.addEventListener('click', ()=>{
     .catch((error) => {
       output.textContent = `Error: ${error.message}`;
       console.error("Error fetching data:", error.message);
+      spinner.style.display = "none";
     }) 
 
 });

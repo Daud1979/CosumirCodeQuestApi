@@ -24,11 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Aquí puedes agregar tu lógica para consumir la API y mostrar los datos
 });
 btngenerate.addEventListener('click', ()=>{
+   apiurl = document.querySelector('#apiurl');
    api = document.querySelector('#api-select').value;
    categories = document.querySelector('#category-select').value;
    count= document.querySelector('#question-count').value;
    api =='ia'? api='https://codequestapi.onrender.com/api/v1/questions/ai':api='https://codequestapi.onrender.com/api/v1/questions/random'
    categories=='all'?categories='':categories=categories   
+   apiurl.value=`${api}?amount=${count}&categories=${categories}`;
    const API_URL = `${api}?amount=${count}&categories=${categories}`;
    output.innerHTML='';
    questionsContainer.innerHTML='';

@@ -55,6 +55,17 @@ h1 {
     gap: 1rem;
    display: flex;
 }
+.apiurl{
+  width: 100%;
+  gap: 1rem;
+ display: flex;
+ 
+ 
+}
+#apiurl{
+  color: #5169f0;  
+  font-style: italic;
+}
 pre {
   white-space: pre-wrap;   
   word-wrap: break-word;   
